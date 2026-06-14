@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CareKin — Care coordination for families</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #1a1a1a;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 24px 32px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    header .logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: #1E6FD9;
+      letter-spacing: -0.3px;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 64px 24px;
+      text-align: center;
+    }
+
+    .hero-icon {
+      width: 80px;
+      height: 80px;
+      background: #EBF3FF;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 32px;
+    }
+
+    .hero-icon svg {
+      width: 44px;
+      height: 44px;
+    }
+
+    h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 700;
+      color: #1a1a1a;
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+      margin-bottom: 16px;
+    }
+
+    .tagline {
+      font-size: clamp(16px, 2.5vw, 20px);
+      color: #1E6FD9;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      font-size: clamp(15px, 2vw, 18px);
+      color: #555;
+      line-height: 1.7;
+      max-width: 520px;
+      margin: 0 auto 40px;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #1E6FD9;
+      color: #fff;
+      text-decoration: none;
+      padding: 16px 28px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .cta-button:hover {
+      background: #1558b0;
+      transform: translateY(-1px);
+    }
+
+    .cta-button svg {
+      width: 24px;
+      height: 24px;
+      fill: #fff;
+    }
+
+    .features {
+      display: flex;
+      gap: 24px;
+      margin-top: 72px;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 800px;
+    }
+
+    .feature {
+      background: #F8FAFE;
+      border: 1px solid #E8F0FB;
+      border-radius: 16px;
+      padding: 24px;
+      text-align: left;
+      max-width: 220px;
+      flex: 1 1 180px;
+    }
+
+    .feature-icon {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    .feature h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin-bottom: 6px;
+    }
+
+    .feature p {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px 32px;
+      border-top: 1px solid #f0f0f0;
+      font-size: 13px;
+      color: #888;
+    }
+
+    footer a {
+      color: #1E6FD9;
+      text-decoration: none;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    footer .links {
+      margin-bottom: 8px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">CareKin</div>
+  </header>
+
+  <main>
+    <div class="hero-icon">
+      <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22 38s-16-9.33-16-20a8 8 0 0 1 16 0 8 8 0 0 1 16 0c0 10.67-16 20-16 20z" fill="#1E6FD9"/>
+      </svg>
+    </div>
+
+    <h1>CareKin</h1>
+    <p class="tagline">Care coordination for families</p>
+    <p class="description">
+      CareKin helps families manage care for aging parents — track appointments,
+      costs, medications and tasks together.
+    </p>
+
+    <a
+      class="cta-button"
+      href="https://play.google.com/store/apps/details?id=com.valorg.carekin"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.18 23.76c.32.17.68.2 1.02.09l11.77-6.8L13 14.08 3.18 23.76zm15.62-9.02L16.3 13.2 12.98 12l3.32-1.2 2.5-1.54c.61-.35.88-1.03.63-1.66L3.2.24C2.86.07 2.48.1 2.16.3L12 12l-1.15 2.43 7.95-1.43c.47-.08.87-.47.87-.92V14c0-.44-.35-.89-.82-1.26zM3.18.24L13 9.92l2.97-2.97L4.2.15C3.87.04 3.5.07 3.18.24z"/>
+      </svg>
+      Download on Google Play
+    </a>
+
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">📅</div>
+        <h3>Appointments</h3>
+        <p>Track all doctor visits and care appointments in one place.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">💊</div>
+        <h3>Care Costs</h3>
+        <p>Manage medications, insurance, and recurring care expenses.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">✅</div>
+        <h3>Tasks</h3>
+        <p>Stay on top of daily care tasks with your whole family team.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">👨‍👩‍👧</div>
+        <h3>Care Circle</h3>
+        <p>Invite family members to coordinate care together.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="mailto:hello@carekin.app">Contact</a>
+    </div>
+    <div>&copy; 2026 Valorg Apps. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>
